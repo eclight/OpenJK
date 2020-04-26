@@ -154,7 +154,7 @@ static void turret_fire ( gentity_t *ent, vec3_t start, vec3_t dir )
 	bolt->s.pos.trType = TR_LINEAR;
 	bolt->s.pos.trTime = level.time;
 	VectorCopy( start, bolt->s.pos.trBase );
-	VectorScale( dir, 1100, bolt->s.pos.trDelta );
+	VectorScale( dir, 1100 * g_blasterVelocityMultiplier->value, bolt->s.pos.trDelta );
 	SnapVector( bolt->s.pos.trDelta );		// save net bandwidth
 	VectorCopy( start, bolt->currentOrigin);
 }

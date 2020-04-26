@@ -62,7 +62,7 @@ void WP_FireBryarPistol( gentity_t *ent, qboolean alt_fire )
 		AngleVectors( angs, wpFwd, NULL, NULL );
 	}
 
-	gentity_t	*missile = CreateMissile( start, wpFwd, BRYAR_PISTOL_VEL, 10000, ent, alt_fire );
+	gentity_t	*missile = CreateMissile( start, wpFwd, BRYAR_PISTOL_VEL * g_blasterVelocityMultiplier->value, 10000, ent, alt_fire );
 
 	missile->classname = "bryar_proj";
 	missile->s.weapon = WP_BRYAR_PISTOL;

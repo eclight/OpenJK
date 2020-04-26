@@ -308,6 +308,8 @@ extern	cvar_t	*g_removeDoors;
 
 extern	cvar_t	*g_ICARUSDebug;
 
+extern  cvar_t* g_blasterVelocityMultiplier;
+
 extern gentity_t *player;
 //
 // g_spawn.c
